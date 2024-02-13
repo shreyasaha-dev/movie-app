@@ -1,0 +1,15 @@
+.movies > img {
+  width: 250px;
+  height: 200px;
+}
+.movies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 30px;
+}
+.movies > h4 {
+  margin-top: 10px;
+  font-size: 15px;
+}

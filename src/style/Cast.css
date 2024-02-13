@@ -1,0 +1,12 @@
+.cast-section > img {
+  width: 100px;
+  height: 120px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.cast-section {
+  margin: 20px;
+}
+.cast-section > p {
+  color: rgb(83, 80, 80);
+}
