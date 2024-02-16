@@ -4,6 +4,7 @@ import "./style/AllMovies.css";
 import axios from "axios";
 import { token } from "./Constant";
 import { MovieDataContext } from "./Context";
+import Nav from "./Nav";
 const AllMovies = () => {
   const [movieData, setMovieData] = useContext(MovieDataContext);
   useEffect(() => {
@@ -26,17 +27,20 @@ const AllMovies = () => {
     getMovies();
   }, []);
   return (
-    <div className="movie-section">
-      {movieData.map((item) => {
-        return (
-          <Movies
-            key={item.id}
-            image={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
-            title={item.original_title}
-            id={item.id}
-          />
-        );
-      })}
+    <div>
+      <Nav />
+      <div className="movie-section">
+        {movieData.map((item) => {
+          return (
+            <Movies
+              key={item.id}
+              image={`https://image.tmdb.org/t/p/w500${item.backdrop_path}`}
+              title={item.original_title}
+              id={item.id}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
